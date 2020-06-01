@@ -7,7 +7,6 @@ public class Main {
 	    int id = 0;
 
 	    while (server.getCurrentCountVehicle() != server.getLimitVehicle()) {
-	        id++;
             switch (((int)(Math.random() * (5 - 1))) + 1) {
                 case 1:
                     Bicycle bicycle = new Bicycle();
@@ -28,6 +27,7 @@ public class Main {
                 default:
                     break;
             }
+            id++;
         }
 
 	    System.out.println("Limit: " + server.getLimitVehicle() );
